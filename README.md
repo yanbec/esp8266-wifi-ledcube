@@ -24,6 +24,7 @@ It's a first try to make the cube controllable by a responsive web interface.
 * More animations
 * Upload animations made with DotMatrixJava via web interface and list them
 * More animations
+* Get rid of unneccessary bootstrap features (loading times of the interface)
 
 ### How to Use
 
