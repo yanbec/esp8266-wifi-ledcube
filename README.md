@@ -38,4 +38,4 @@ When that's done, the cube is controllable via UART with the ESP8266(and with yo
 
 On startup, the whole cube will blink with a delay of 100 ms, trying to connect to the configured WiFi. On success, the animation will change to to one fourth of the cube circling counter-clockwise. If the connection can't be established, it will set up a SoftAP and you'll see 1x8 LEDs circling around clockwise.
 
-Let me know if you are trouble, but also if you have fun :)
+Let me know if you are in trouble, but also if you have fun :)
