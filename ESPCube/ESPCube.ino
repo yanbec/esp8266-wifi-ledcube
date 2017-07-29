@@ -133,12 +133,11 @@ void setup ( void ) {
     if (wifiRetry > 100) {
       WiFi.disconnect();
       WiFi.mode(WIFI_AP);
-      bool result = WiFi.softAP(softapssid, softappassword);
-      delay(1000);
-      if (result)
-        Serial.println("Soft-AP set up.");
+      if (softappassword == "")
+        WiFi.softAP(softapssid);
       else
-        Serial.println("Something went wrong.");
+        WiFi.softAP(softapssid, softappassword);
+
       WiFi.printDiag(Serial);
       currentAnimation = fence;
       break;
