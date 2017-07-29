@@ -1,6 +1,7 @@
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
+#include "WifiConfig.h"
 #include "FS.h"
 enum animation {
   rotTowerLeft,
@@ -18,8 +19,6 @@ enum animation {
   COUNT
 };
 
-const char *ssid = "yourSSID";
-const char *password = "yourPassword";
 int currentAnimationStep = 0;
 int currentAnimationMaxSteps = 4;
 bool animating = true;
@@ -140,7 +139,7 @@ void setup ( void ) {
     if (wifiRetry > 100) {
       WiFi.disconnect();
       WiFi.mode(WIFI_AP);
-      bool result = WiFi.softAP("ESPCube");
+      bool result = WiFi.softAP(softapssid, softappassword);
       delay(1000);
       if (result)
         Serial.println("Soft-AP set up.");
