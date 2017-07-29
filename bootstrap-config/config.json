@@ -388,8 +388,9 @@
     "tables.less",
     "forms.less",
     "buttons.less",
-    "responsive-utilities.less"
+    "responsive-utilities.less",
+    "panels.less"
   ],
   "js": [],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=b3ae6420aace51d06298bdf11af0c518"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=cc566f8c0e0833497fcb02b9c7074817"
 }

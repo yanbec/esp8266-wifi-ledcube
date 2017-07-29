@@ -8,7 +8,6 @@ enum animation {
   rotTowerRight,
   off,
   fullOn,
-  wave,
   randomAnimation,
   test,
   binaryFront,
@@ -55,12 +54,7 @@ void setupServer() {
     currentAnimation = fullOn;
     server.send ( 200, "text/html", "" );
   });
-
-  server.on ( "/wave", []() {
-    currentAnimation = wave;
-    server.send ( 200, "text/html", "" );
-  });
-
+  
   server.on ( "/fence", []() {
     currentAnimation = fence;
     server.send ( 200, "text/html", "" );
@@ -175,7 +169,6 @@ void loop ( void ) {
     
 
   if (animating) {
-    Serial.println();
     switch (currentAnimation) {
       case rotTowerLeft:
         rotateTower(true);
@@ -188,9 +181,6 @@ void loop ( void ) {
         break;
       case off:
         turnCubeOff();
-        break;
-      case wave:
-        doWave();
         break;
       case randomAnimation:
         doRandom();
